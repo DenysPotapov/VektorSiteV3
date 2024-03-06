@@ -1,0 +1,19 @@
+@import url("https://fonts.googleapis.com/css?family=Oswald:regular,600&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Raleway:regular,600,700&display=swap");
+
+@import url("reset.css");
+
+body {
+   background-color: #fff;
+}
+
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+   display: flex;
+   flex-direction: column;
+}
+
+.wrapper>main {
+   flex-grow: 1;
+}

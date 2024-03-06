@@ -1,0 +1,17 @@
+@import "_reset.scss";
+@import "_fonts.scss";
+
+body {
+   background-color: #fff;
+}
+
+.wrapper {
+   min-height: 100%;
+   overflow: clip;
+   display: flex;
+   flex-direction: column;
+}
+
+.wrapper>main {
+   flex-grow: 1;
+}
