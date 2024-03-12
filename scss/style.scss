@@ -1,5 +1,8 @@
+@use "sass:math";
+
 @import "_reset.scss";
 @import "_fonts.scss";
+@import "_functions.scss";
 
 body {
    background-color: #fff;
@@ -15,3 +18,4 @@ body {
 .wrapper>main {
    flex-grow: 1;
 }
+
