@@ -66,3 +66,9 @@ body {
       -ms-flex-positive: 1;
           flex-grow: 1;
 }
+
+[class*="__container"] {
+  min-width: 92.5rem;
+  padding: 0 0.9375rem;
+  margin: 0 auto;
+}
