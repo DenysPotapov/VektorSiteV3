@@ -232,15 +232,9 @@ body {
             opacity: 1;
             z-index: 10;
 
-            @keyframes showContent {
-               to {
-                  transform: translateY(0);
-                  filter: blur(0);
-                  opacity: 1;
-               }
-            }
+           
 
-            p:nth-chld(1),
+            p:nth-child(1),
             h2,
             p:nth-child(3) {
                transform: translateY(30px);
@@ -256,6 +250,14 @@ body {
 
             p:nth-child(3) {
                animation-duration: 1.3s;
+            } 
+            
+            @keyframes showContent {
+               to {
+                  transform: translateY(0);
+                  filter: blur(0);
+                  opacity: 1;
+               }
             }
 
          }
