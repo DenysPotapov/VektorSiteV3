@@ -390,6 +390,7 @@ body {
   letter-spacing: 0.1875rem;
   position: relative;
   margin-bottom: 100px;
+  background-color: #fff;
 }
 [class*=__menu-title]::after {
   position: absolute;
@@ -419,9 +420,9 @@ body {
 }
 
 [class*=__menu-menu] {
-  font-size: 1.25rem;
+  font-size: 1.125rem;
   font-weight: 500;
-  line-height: 1.44;
+  line-height: 1.8;
   text-transform: capitalize;
 }
 

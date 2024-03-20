@@ -342,7 +342,7 @@ body {
       font-weight: 700;
       letter-spacing: toRem(2);
       padding: toRem(10);
-      
+           
 
       &::before {
          content: "";
@@ -379,6 +379,7 @@ body {
    letter-spacing: toRem(3);
    position: relative;
    margin-bottom: 100px;
+   background-color: $mainColor;
 
    &::after {
       position: absolute;
@@ -404,9 +405,9 @@ body {
 }
 
 [class*="__menu-menu"] {
-   font-size: toRem(20);
+   font-size: toRem(18);
    font-weight: 500;
-   line-height: 1.44;
+   line-height: 1.8;
    text-transform: capitalize;
 
 }
