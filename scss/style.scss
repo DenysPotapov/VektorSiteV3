@@ -9,6 +9,8 @@
 $mainColor: #fff;
 $secondGrayColor:#919191;
 $secondOrangeColor: #F99002;
+$secondBlackColor: #131313;
+$secondBlueColor:#045fe7;
 
 
 body {
@@ -133,8 +135,6 @@ body {
          transform-origin: left;
       }
    }
-}
-.menu {
 }
 .header-tel {
    font-family: "Oswald", sans-serif;
@@ -324,4 +324,206 @@ body {
 
 
 }
+
+
+// Section-Title =============================================================
+
+
+.section-title {
+   font-family: "Oswald", sans-serif;
+   margin: toRem(50) auto toRem(20);
+   
+   h2 {
+      
+      color: $secondOrangeColor;
+      text-transform: uppercase;
+      font-size: toRem(18);
+      line-height: 1.15;
+      font-weight: 700;
+      letter-spacing: toRem(2);
+      padding: toRem(10);
+      
+
+      &::before {
+         content: "";
+         display:inline-block;
+         margin: toRem(7);
+         
+         width: toRem(100);
+         height: toRem(2);
+         background: $secondOrangeColor;
+      }
+   }
+ 
+   p {
+      color: $secondBlackColor;
+      text-transform: uppercase;
+      font-size: toRem(50);
+      line-height: 1.15;
+      font-weight: 600;
+
+   }
+
+}
+
+
+
+// Services ===================================================================
+
+[class*="__menu-title"] {
+   font-family: "Oswald", sans-serif;
+   color: $secondBlueColor;
+   text-transform: uppercase;
+   font-size: toRem(36);
+   font-weight: 600;
+   letter-spacing: toRem(3);
+   position: relative;
+   margin-bottom: 100px;
+
+   &::after {
+      position: absolute;
+      content: "";
+      width: 140px;
+      height: 140px;
+      background-image: url("/images/sprite/sprite.png");
+      bottom: -50px;
+      left: 0;
+      transform: scale(1);
+      transition: transform .6s;
+
+      .business-field:hover & {
+         transform: scale(1.4);
+      }
+
+      .home-field:hover & {
+         transform: scale(1.4);
+      }
+   }
+
+   
+}
+
+[class*="__menu-menu"] {
+   font-size: toRem(20);
+   font-weight: 500;
+   line-height: 1.44;
+   text-transform: capitalize;
+
+}
+
+
+.services {
+
+   // .services__container
+
+   &__container {
+   }
+
+   // .services__fields
+
+   &__fields {
+      display: flex;
+      flex-direction: column;
+      row-gap: toRem(20);
+   }
+
+   // .services__field-home
+
+   &__field-home {
+      display: flex;
+      align-items: center;
+      
+      justify-content:space-between;
+      gap: toRem(20);
+      
+   }
+
+   // .services__field-business
+
+   &__field-business {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: toRem(20);
+   }
+}
+
+
+.home-field {
+   
+
+   // .home-field__picture
+
+   &__picture {
+      flex: 0 0 66.66%;
+
+      img {
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+
+   // .home-field__menu
+
+   &__menu {
+      margin: 0 auto;
+      
+      
+   }
+
+   // .home-field__menu-title
+
+   &__menu-title {
+
+        
+
+   }
+
+   // .home-field__menu-menu
+
+   &__menu-menu {
+   }
+}
+
+
+
+
+.business-field {
+
+   // .business-field__menu
+
+   &__menu {
+      margin: 0 auto;
+   }
+
+   // .business-field__menu-title
+
+   &__menu-title {
+   }
+
+   // .business-field__menu-menu
+
+   &__menu-menu {
+   }
+
+   // .business-field__picture
+
+   &__picture {
+      flex: 0 0 66.66%;
+
+      img {
+         height: 100%;
+         width: 100%;
+         object-fit: cover;
+      }
+   }
+}
+
+
+
+
+
+
+
 
