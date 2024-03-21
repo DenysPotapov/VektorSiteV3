@@ -19,6 +19,8 @@ body {
    font-family: "Raleway", sans-serif;
    font-size: toRem(16);
    line-height: 1.15;
+
+   
 }
 
 .wrapper {
@@ -333,7 +335,7 @@ body {
    font-family: "Oswald", sans-serif;
    margin: toRem(50) auto toRem(20);
    
-   h2 {
+   h3 {
       
       color: $secondOrangeColor;
       text-transform: uppercase;
@@ -626,6 +628,7 @@ body {
       scrollbar-width: thin;
       scrollbar-color: $secondOrangeColor #f0eaea;
       scroll-behavior: smooth;
+
       
    }
 
