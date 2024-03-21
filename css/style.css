@@ -390,7 +390,6 @@ body {
   letter-spacing: 0.1875rem;
   position: relative;
   margin-bottom: 100px;
-  background-color: #fff;
 }
 [class*=__menu-title]::after {
   position: absolute;
