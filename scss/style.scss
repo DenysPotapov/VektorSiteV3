@@ -405,10 +405,12 @@ body {
 }
 
 [class*="__menu-menu"] {
-   font-size: toRem(18);
+   font-size: toRem(12);
+   text-transform: uppercase;
+   line-height: 2;
    font-weight: 500;
-   line-height: 1.8;
-   text-transform: capitalize;
+   letter-spacing: toRem(2);
+   
 
 }
 
@@ -476,16 +478,54 @@ body {
    // .home-field__menu-title
 
    &__menu-title {
-
-        
-
+     
    }
 
    // .home-field__menu-menu
 
    &__menu-menu {
    }
+
+   // .home-field__list
+
+	&__list {
+		}
+
+	// .home-field__item
+
+	&__item {
+		}
+
+	// .home-field__link
+
+	&__link {
+      position: relative;
+      transform: scale(1);
+      transition: transform .2s;
+
+      &:hover {
+         transform: scale(1.04);
+      }
+
+      &::after {
+         position: absolute;
+         content: "";
+         border-bottom: toRem(3) solid $secondOrangeColor;
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         transform: scaleX(0);
+         transform-origin: right;
+         transition: transform .6s;
+      }
+      &:hover::after {
+         transform: scaleX(1);
+         transform-origin: left;
+      }
+		}
 }
+
+
 
 
 
@@ -507,6 +547,43 @@ body {
 
    &__menu-menu {
    }
+   // .business-field__list
+
+	&__list {
+		}
+
+	// .business-field__item
+
+	&__item {
+		}
+
+	// .business-field__link
+
+	&__link {
+      position: relative;
+      transform: scale(1);
+      transition: transform .2s;
+
+      &:hover {
+         transform: scale(1.04);
+      }
+
+      &::after {
+         position: absolute;
+         content: "";
+         border-bottom: toRem(3) solid $secondOrangeColor;
+         left: 0;
+         bottom: 0;
+         width: 100%;
+         transform: scaleX(0);
+         transform-origin: right;
+         transition: transform .6s;
+      }
+      &:hover::after {
+         transform: scaleX(1);
+         transform-origin: left;
+      }
+		}
 
    // .business-field__picture
 
@@ -520,6 +597,122 @@ body {
       }
    }
 }
+
+
+
+// Eqipment ====================================================================
+
+.eqip {
+
+   // .eqip__container
+
+   &__container {
+   }
+
+   // .eqip__fields
+
+   &__fields {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+   }
+
+   // .eqip__field-text
+
+   &__field-text {
+      height: toRem(200);
+      
+      overflow-y: scroll;
+      scrollbar-width: thin;
+      scrollbar-color: $secondOrangeColor #f0eaea;
+      scroll-behavior: smooth;
+      
+   }
+
+   // .eqip__field-picture
+
+   &__field-picture {
+      flex: 0 0 40%;
+      width: 100%;
+      height: toRem(200);
+      
+      
+      img {
+         width: 100%;
+         height: 100%;
+         object-fit: contain;
+      }
+   }
+
+   // .eqip__logos
+
+	&__logos {
+      margin-top: toRem(50);
+      padding: toRem(25) 0;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+
+      &::before {
+         position: absolute;
+         content: "";
+         left: 0;
+         top: 0;
+         width: toRem(250);
+         height: 100%;
+         z-index: 2;
+         background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+      }
+
+      &::after {
+         position: absolute;
+         content: "";
+         right: 0;
+         top: 0;
+         width: toRem(250);
+         height: 100%;
+         z-index: 2;
+         background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+
+      }
+
+      &:hover {
+         .eqip__logos-slide {
+            animation-play-state: paused;
+         }
+      }
+	}
+
+	// .eqip__logos-slide
+
+	&__logos-slide {
+      display: inline-block;
+      animation: 20s slideLogos infinite linear;
+
+      img {
+         height: toRem(75);
+         margin: 0 toRem(25);
+      }
+
+	}
+}
+
+@keyframes slideLogos {
+   from {
+      transform: translateX(0);
+   }
+
+   to {
+      transform: translateX(-100%);
+   }
+   
+}
+
+
+
+.picture-field {
+}
+
 
 
 

@@ -1,3 +1,5 @@
+// Main Slider
+
 let items = document.querySelectorAll(".slider .slider-list .slider-item");
 let next = document.getElementById("next");
 let prev = document.getElementById("prev");
@@ -43,4 +45,12 @@ function showSlider() {
    }, 5000)
 
 }
+
+
+
+// Logos Slider
+
+var copy = document.querySelector(".eqip__logos-slide").cloneNode(true);
+document.querySelector(".eqip__logos").appendChild(copy);
+
 
