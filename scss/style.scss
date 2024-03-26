@@ -274,7 +274,7 @@ body {
    position: absolute;
    top: 35%;
    right: 50px;
-   z-index: 100;
+   z-index: 99;
    display: flex;
    align-items: center;
 
@@ -528,10 +528,6 @@ body {
 }
 
 
-
-
-
-
 .business-field {
 
    // .business-field__menu
@@ -711,10 +707,210 @@ body {
    
 }
 
-
-
 .picture-field {
 }
+
+
+
+// Section VidSlider ==========================================================================
+
+.vidslider {
+   height: 100vh;
+   position: relative;
+
+.slider-arrows {
+      left: 50px;
+   }
+
+.vidslider-list {
+   .vidslider-item {
+      position: absolute;
+      inset: 0 0 0 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: .5s;
+
+      video {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      &::after {
+         content: "";
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         background-image: linear-gradient(to top, rgba(0, 0, 0, .8) 20%, transparent);
+
+      }
+
+      .vidslider-item__content {
+         position: absolute;
+         right: 10%;
+         top: 25%;
+         width: 500px;
+         max-width: 80%;
+         z-index: 1;
+         font-family: "Oswald", sans-serif;
+         text-transform: uppercase;
+         color: $mainColor;
+
+         p {
+            &:nth-child(1) {
+               letter-spacing: 10px;
+               font-weight: 600;
+            }
+         }
+
+         h2 {
+            font-size: 100px;
+            font-weight: 700;
+            margin: 0 0 toRem(20) toRem(-5);
+         }
+
+      }
+
+      
+
+      &.active {
+         opacity: 1;
+         z-index: 10;
+
+        
+
+         p:nth-child(1),
+         h2,
+         p:nth-child(3) {
+            transform: translateY(30px);
+            filter: blur(20px);
+            opacity: 0;
+            animation: showContent .5s .7s ease-in-out 1 forwards;
+
+         }
+
+         h2 {
+            animation-delay: 1s;
+         }
+
+         p:nth-child(3) {
+            animation-duration: 1.3s;
+         } 
+         
+         @keyframes showContent {
+            to {
+               transform: translateY(0);
+               filter: blur(0);
+               opacity: 1;
+            }
+         }
+
+      }
+   }
+
+
+}
+
+}
+
+
+// Order-Form ==============================================================================
+
+.order-form {
+
+   // .order-form__container
+
+   &__container {
+   }
+}
+.section-title {
+}
+
+
+
+.card {
+   background-color: #fff;
+   border-radius: 10px;
+   padding: 20px;
+   width: 350px;
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .form {
+   display: flex;
+   flex-direction: column;
+ }
+ 
+ .group {
+   position: relative;
+ }
+ 
+ .form .group label {
+   text-transform: capitalize;
+   color: $secondGrayColor;
+   position: absolute;
+   top: -10px;
+   left: 10px;
+   background-color: #fff;
+   transition: all .3s ease;
+ }
+ 
+ .form .group input,
+ .form .group textarea {
+   padding: 10px;
+   border-radius: 5px;
+   border: 1px solid $secondBlackColor;
+   margin-bottom: 20px;
+   outline: 0;
+   width: 100%;
+   background-color: transparent;
+ }
+ 
+ .form .group input:placeholder-shown+ label, .form .group textarea:placeholder-shown +label {
+   top: 10px;
+   background-color: transparent;
+ }
+ 
+ .form .group input:focus,
+ .form .group textarea:focus {
+   border-color: $secondBlueColor;
+ }
+ 
+ .form .group input:focus+ label, .form .group textarea:focus +label {
+   top: -10px;
+   left: 10px;
+   background-color: #fff;
+   color: $secondBlueColor;
+   font-weight: 600;
+   
+ }
+ 
+ .form .group textarea {
+   resize: none;
+   height: toRem(200);
+ }
+ 
+ .form button {
+   background-color: $secondBlueColor;
+   color: #fff;
+   border: none;
+   border-radius: 5px;
+   padding: 10px;
+   text-transform: uppercase;
+   cursor: pointer;
+   transition: all 0.3s ease;
+ }
+ 
+ .form button:hover {
+   background-color: #27408b;
+ }
+ 
+ 
+
+
 
 
 

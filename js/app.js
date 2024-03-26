@@ -46,11 +46,60 @@ function showSlider() {
 
 }
 
+// Video Slider
+
+let viditems = document.querySelectorAll(".vidslider .vidslider-list .vidslider-item");
+let vidnext = document.getElementById("vidnext");
+let vidprev = document.getElementById("vidprev");
+
+
+let vidcountItem = viditems.length;
+let viditemActive = 0;
+
+vidnext.onclick = function () {
+   viditemActive = viditemActive + 1;
+   if (viditemActive >= vidcountItem) {
+      viditemActive = 0;
+   }
+   showVidSlider();
+}
+
+vidprev.onclick = function () {
+   viditemActive = viditemActive - 1;
+   if (viditemActive < 0) {
+      viditemActive = vidcountItem - 1;
+
+   }
+   showVidSlider();
+}
+
+// auto run slider
+let refreshVidInterval = setInterval(() => {
+   vidnext.click();
+}, 5000)
+
+
+function showVidSlider() {
+   // remove item active old
+   let viditemActiveOld = document.querySelector(".vidslider .vidslider-list .vidslider-item.active");
+   viditemActiveOld.classList.remove("active");
+
+   // active new item
+   viditems[viditemActive].classList.add("active");
+
+   // clear auto time run slider
+   clearInterval(refreshVidInterval);
+   refreshVidInterval = setInterval(() => {
+      vidnext.click();
+   }, 5000)
+
+}
+
 
 
 // Logos Slider
 
-var copy = document.querySelector(".eqip__logos-slide").cloneNode(true);
+let copy = document.querySelector(".eqip__logos-slide").cloneNode(true);
 document.querySelector(".eqip__logos").appendChild(copy);
 
 
