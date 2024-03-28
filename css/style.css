@@ -389,7 +389,7 @@ body {
   font-weight: 600;
   letter-spacing: 0.1875rem;
   position: relative;
-  margin-bottom: 100px;
+  margin-bottom: 4.375rem;
 }
 [class*=__menu-title]::after {
   position: absolute;
@@ -419,11 +419,10 @@ body {
 }
 
 [class*=__menu-menu] {
-  font-size: 0.75rem;
+  font-size: 1.125rem;
   text-transform: uppercase;
   line-height: 2;
-  font-weight: 500;
-  letter-spacing: 0.125rem;
+  font-weight: 600;
 }
 
 .services__fields {
@@ -463,8 +462,8 @@ body {
 
 .home-field__picture {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 66.66%;
-          flex: 0 0 66.66%;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
 }
 .home-field__picture img {
   height: 100%;
@@ -477,18 +476,15 @@ body {
 }
 .home-field__link {
   position: relative;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
 }
-.home-field__link:hover {
-  -webkit-transform: scale(1.04);
-      -ms-transform: scale(1.04);
-          transform: scale(1.04);
+.home-field__link::before {
+  content: "";
+  width: 0.625rem;
+  height: 0.625rem;
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -172px -185px;
+  vertical-align: middle;
+  margin-right: 0.625rem;
 }
 .home-field__link::after {
   position: absolute;
@@ -522,18 +518,15 @@ body {
 }
 .business-field__link {
   position: relative;
-  -webkit-transform: scale(1);
-      -ms-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: -webkit-transform 0.2s;
-  transition: -webkit-transform 0.2s;
-  transition: transform 0.2s;
-  transition: transform 0.2s, -webkit-transform 0.2s;
 }
-.business-field__link:hover {
-  -webkit-transform: scale(1.04);
-      -ms-transform: scale(1.04);
-          transform: scale(1.04);
+.business-field__link::before {
+  content: "";
+  width: 0.625rem;
+  height: 0.625rem;
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -172px -185px;
+  vertical-align: middle;
+  margin-right: 0.625rem;
 }
 .business-field__link::after {
   position: absolute;
@@ -563,8 +556,8 @@ body {
 }
 .business-field__picture {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 66.66%;
-          flex: 0 0 66.66%;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
 }
 .business-field__picture img {
   height: 100%;
@@ -751,103 +744,4 @@ body {
             filter: blur(0);
     opacity: 1;
   }
-}
-
-.card {
-  background-color: #fff;
-  border-radius: 10px;
-  padding: 20px;
-  width: 350px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.group {
-  position: relative;
-}
-
-.form .group label {
-  text-transform: capitalize;
-  color: #919191;
-  position: absolute;
-  top: -10px;
-  left: 10px;
-  background-color: #fff;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.form .group input,
-.form .group textarea {
-  padding: 10px;
-  border-radius: 5px;
-  border: 1px solid #131313;
-  margin-bottom: 20px;
-  outline: 0;
-  width: 100%;
-  background-color: transparent;
-}
-
-.form .group input:-moz-placeholder-shown + label, .form .group textarea:-moz-placeholder-shown + label {
-  top: 10px;
-  background-color: transparent;
-}
-
-.form .group input:-ms-input-placeholder + label, .form .group textarea:-ms-input-placeholder + label {
-  top: 10px;
-  background-color: transparent;
-}
-
-.form .group input:placeholder-shown + label, .form .group textarea:placeholder-shown + label {
-  top: 10px;
-  background-color: transparent;
-}
-
-.form .group input:focus,
-.form .group textarea:focus {
-  border-color: #045fe7;
-}
-
-.form .group input:focus + label, .form .group textarea:focus + label {
-  top: -10px;
-  left: 10px;
-  background-color: #fff;
-  color: #045fe7;
-  font-weight: 600;
-}
-
-.form .group textarea {
-  resize: none;
-  height: 12.5rem;
-}
-
-.form button {
-  background-color: #045fe7;
-  color: #fff;
-  border: none;
-  border-radius: 5px;
-  padding: 10px;
-  text-transform: uppercase;
-  cursor: pointer;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-}
-
-.form button:hover {
-  background-color: #27408b;
 }

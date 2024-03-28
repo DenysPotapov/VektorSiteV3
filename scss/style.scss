@@ -380,7 +380,7 @@ body {
    font-weight: 600;
    letter-spacing: toRem(3);
    position: relative;
-   margin-bottom: 100px;
+   margin-bottom: toRem(70);
    
 
    &::after {
@@ -407,12 +407,11 @@ body {
 }
 
 [class*="__menu-menu"] {
-   font-size: toRem(12);
+   font-size: toRem(18);
    text-transform: uppercase;
    line-height: 2;
-   font-weight: 500;
-   letter-spacing: toRem(2);
-   
+   font-weight: 600;
+     
 
 }
 
@@ -460,7 +459,7 @@ body {
    // .home-field__picture
 
    &__picture {
-      flex: 0 0 66.66%;
+      flex: 0 0 60%;
 
       img {
          height: 100%;
@@ -502,12 +501,18 @@ body {
 
 	&__link {
       position: relative;
-      transform: scale(1);
-      transition: transform .2s;
 
-      &:hover {
-         transform: scale(1.04);
+      &::before {
+         content: "";
+         width: toRem(10);
+         height: toRem(10);
+         background-image: url(../images/sprite/sprite.png);
+         background-position: -172px -185px;
+         vertical-align: middle;
+         margin-right: toRem(10);
+
       }
+      
 
       &::after {
          position: absolute;
@@ -559,12 +564,18 @@ body {
 
 	&__link {
       position: relative;
-      transform: scale(1);
-      transition: transform .2s;
 
-      &:hover {
-         transform: scale(1.04);
+      &::before {
+         content: "";
+         width: toRem(10);
+         height: toRem(10);
+         background-image: url(../images/sprite/sprite.png);
+         background-position: -172px -185px;
+         vertical-align: middle;
+         margin-right: toRem(10);
+
       }
+      
 
       &::after {
          position: absolute;
@@ -586,7 +597,7 @@ body {
    // .business-field__picture
 
    &__picture {
-      flex: 0 0 66.66%;
+      flex: 0 0 60%;
 
       img {
          height: 100%;
@@ -816,97 +827,9 @@ body {
 }
 
 
-// Order-Form ==============================================================================
-
-.order-form {
-
-   // .order-form__container
-
-   &__container {
-   }
-}
-.section-title {
-}
+// About ==============================================================================
 
 
-
-.card {
-   background-color: #fff;
-   border-radius: 10px;
-   padding: 20px;
-   width: 350px;
-   display: flex;
-   flex-direction: column;
- }
- 
- .form {
-   display: flex;
-   flex-direction: column;
- }
- 
- .group {
-   position: relative;
- }
- 
- .form .group label {
-   text-transform: capitalize;
-   color: $secondGrayColor;
-   position: absolute;
-   top: -10px;
-   left: 10px;
-   background-color: #fff;
-   transition: all .3s ease;
- }
- 
- .form .group input,
- .form .group textarea {
-   padding: 10px;
-   border-radius: 5px;
-   border: 1px solid $secondBlackColor;
-   margin-bottom: 20px;
-   outline: 0;
-   width: 100%;
-   background-color: transparent;
- }
- 
- .form .group input:placeholder-shown+ label, .form .group textarea:placeholder-shown +label {
-   top: 10px;
-   background-color: transparent;
- }
- 
- .form .group input:focus,
- .form .group textarea:focus {
-   border-color: $secondBlueColor;
- }
- 
- .form .group input:focus+ label, .form .group textarea:focus +label {
-   top: -10px;
-   left: 10px;
-   background-color: #fff;
-   color: $secondBlueColor;
-   font-weight: 600;
-   
- }
- 
- .form .group textarea {
-   resize: none;
-   height: toRem(200);
- }
- 
- .form button {
-   background-color: $secondBlueColor;
-   color: #fff;
-   border: none;
-   border-radius: 5px;
-   padding: 10px;
-   text-transform: uppercase;
-   cursor: pointer;
-   transition: all 0.3s ease;
- }
- 
- .form button:hover {
-   background-color: #27408b;
- }
  
  
 
