@@ -132,8 +132,8 @@ body {
 
 .header-menu {
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 45%;
-          flex: 0 0 45%;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
 }
 .header-menu__list {
   display: -webkit-box;
@@ -419,10 +419,10 @@ body {
 }
 
 [class*=__menu-menu] {
-  font-size: 1.125rem;
+  font-size: 1.0625rem;
   text-transform: uppercase;
   line-height: 2;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .services__fields {
@@ -744,4 +744,249 @@ body {
             filter: blur(0);
     opacity: 1;
   }
+}
+
+.contact__fields {
+  background: url(/images/bg/bg-step.jpg) no-repeat;
+  background-size: cover;
+  background-position: left;
+}
+.contact__fields .fields__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  gap: 1.875rem;
+}
+@media screen and (max-width: 950px) {
+  .contact__fields .fields__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.contact__info {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35%;
+          flex: 0 0 35%;
+  color: #fff;
+  line-height: 1.5;
+}
+.contact__info div {
+  margin-top: 1.25rem;
+}
+.contact__info div:nth-child(1)::before {
+  content: "";
+  width: 0.75rem;
+  height: 1.0625rem;
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -220px -145px;
+  margin-right: 0.625rem;
+}
+.contact__info div:nth-child(2)::before {
+  content: "";
+  width: 0.875rem;
+  height: 0.875rem;
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -102px -212px;
+  margin-right: 0.625rem;
+}
+.contact__info div:nth-child(3)::before {
+  content: "";
+  width: 1rem;
+  height: 0.625rem;
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -152px -185px;
+  margin-right: 0.625rem;
+}
+.contact__form .text-box {
+  background: #131313;
+  color: #fff;
+  border: none;
+  width: calc(50% - 0.625rem);
+  height: 3.125rem;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-top: 1.875rem;
+  opacity: 0.7;
+}
+@media screen and (max-width: 950px) {
+  .contact__form .text-box {
+    width: 100%;
+  }
+}
+.contact__form .text-box:first-child {
+  margin-right: 0.9375rem;
+}
+.contact__form textarea {
+  background: #131313;
+  color: #fff;
+  border: none;
+  width: 100%;
+  height: 3.125rem;
+  padding: 0.75rem;
+  min-height: 12.5rem;
+  max-height: 25rem;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.1);
+  margin-top: 1.25rem;
+  opacity: 0.7;
+  font-family: "Raleway", sans-serif;
+}
+.contact__form .send-btn {
+  float: right;
+  margin-bottom: 1.875rem;
+  background: #045fe7;
+  margin-top: 1.25rem;
+  color: #fff;
+  border: none;
+  width: 8.75rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  border-radius: 0.3125rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  cursor: pointer;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+.contact__form .send-btn:hover {
+  background: #064cb6;
+  color: #F99002;
+}
+
+.footer {
+  padding: 0.9375rem 0;
+  border-bottom: 0.0625rem solid #666666;
+  background: url(/images/bg/bg-step.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  font-size: 0.75rem;
+  color: rgb(255, 255, 255);
+  letter-spacing: 0.125rem;
+}
+.footer__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.footer__container .footer-contact {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 40%;
+          flex: 0 0 40%;
+}
+.footer__container .footer-contact div {
+  margin-top: 0.625rem;
+}
+.footer__container .footer-contact div:nth-child(3)::before {
+  content: "";
+  width: 0.75rem;
+  height: 1.0625rem;
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -220px -145px;
+  vertical-align: middle;
+  margin-right: 0.625rem;
+}
+.footer__container .footer-contact div:nth-child(1)::before {
+  content: "";
+  width: 0.875rem;
+  height: 0.875rem;
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -102px -212px;
+  vertical-align: middle;
+  margin-right: 0.625rem;
+}
+.footer__container .footer-contact div:nth-child(2)::before {
+  content: "";
+  width: 1rem;
+  height: 0.625rem;
+  background-image: url(../images/sprite/sprite.png);
+  background-position: -152px -185px;
+  vertical-align: middle;
+  margin-right: 0.625rem;
+}
+.footer .social-buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.footer .social-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  margin: 0 10px;
+  background-color: #fff;
+  -webkit-box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1529411765);
+          box-shadow: 0px 0px 4px rgba(0, 0, 0, 0.1529411765);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+.footer .social-button:hover {
+  background-color: #f2f2f2;
+  -webkit-box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1529411765);
+          box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.1529411765);
+}
+.footer .social-button svg {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  height: 20px;
+}
+.footer .facebook {
+  background-color: #3b5998;
+}
+.footer .facebook svg {
+  fill: #f2f2f2;
+}
+.footer .facebook:hover svg {
+  fill: #3b5998;
+}
+.footer .linkedin {
+  background-color: #0077b5;
+}
+.footer .linkedin svg {
+  fill: #f2f2f2;
+}
+.footer .linkedin:hover svg {
+  fill: #0077b5;
+}
+.footer .instagram {
+  background-color: #c13584;
+}
+.footer .instagram svg {
+  fill: #f2f2f2;
+}
+.footer .instagram:hover svg {
+  fill: #c13584;
 }

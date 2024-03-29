@@ -100,7 +100,7 @@ body {
    font-size: toRem(14);
 }
 .header-menu {
-   flex: 0 0 45%;
+   flex: 0 0 40%;
 
    // .header-menu__list
 
@@ -407,10 +407,10 @@ body {
 }
 
 [class*="__menu-menu"] {
-   font-size: toRem(18);
+   font-size: toRem(17);
    text-transform: uppercase;
    line-height: 2;
-   font-weight: 600;
+   font-weight: 500;
      
 
 }
@@ -827,7 +827,318 @@ body {
 }
 
 
-// About ==============================================================================
+// Section Contact ==============================================================================
+
+.contact {
+
+  
+   
+   
+
+   // .contact__container
+
+   &__container {
+
+   }
+
+   // .contact__fields
+
+   &__fields {
+      
+      background: url(/images/bg/bg-step.jpg) no-repeat;
+      background-size: cover;
+      background-position: left;
+      
+
+
+      .fields__container {
+         display: flex;
+         align-items: center;
+         justify-content: space-between;
+         gap: toRem(30);
+
+         @media screen and (max-width: 950px) {
+            flex-direction: column;
+         }
+
+      }
+   }
+
+   // .contact__info
+
+   &__info {
+      flex: 0 0 35%;
+      
+      color: $mainColor;
+      line-height: 1.5;
+
+      div {
+         margin-top: toRem(20);
+
+         &:nth-child(1) {
+            &::before {
+               content: "";
+               width: toRem(12);
+               height: toRem(17);
+               background-image: url(../images/sprite/sprite.png);
+               background-position: -220px -145px;
+               // vertical-align: middle;
+               margin-right: toRem(10);
+            }
+
+         }
+         &:nth-child(2) {
+            &::before {
+               content: "";
+               width: toRem(14);
+               height: toRem(14);
+               background-image: url(../images/sprite/sprite.png);
+               background-position: -102px -212px;
+               // vertical-align: middle;
+               margin-right: toRem(10);
+            }
+
+         }
+         &:nth-child(3) {
+            &::before {
+               content: "";
+               width: toRem(16);
+               height: toRem(10);
+               background-image: url(../images/sprite/sprite.png);
+               background-position: -152px -185px;
+               // vertical-align: middle;
+               margin-right: toRem(10);
+            }
+
+         }
+      }
+   }
+
+   // .contact__form
+
+   &__form {
+      .text-box {
+         background: $secondBlackColor;
+         color: $mainColor;
+         border: none;
+         width: calc(50% - toRem(10));
+         height: toRem(50);
+         padding: toRem(12);
+         font-size: toRem(16);
+         border-radius: toRem(5);
+         box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+         margin-top: toRem(30);
+         opacity: 0.7;
+
+         @media screen and (max-width: 950px) {
+            width: 100%;
+            
+         }
+
+         &:first-child {
+            margin-right: toRem(15);
+         }
+      }
+
+      textarea {
+         background: $secondBlackColor;
+         color: $mainColor;
+         border: none;
+         width: 100%;
+         height: toRem(50);
+         padding: toRem(12);
+         min-height: toRem(200);
+         max-height: toRem(400);
+         font-size: toRem(16);
+         border-radius: toRem(5);
+         box-shadow: 0 1px 1px rgba(0, 0, 0, .1);
+         margin-top: toRem(20);
+         opacity: 0.7;
+         font-family: "Raleway", sans-serif;
+
+      }
+
+      .send-btn {
+         float: right;
+         margin-bottom: toRem(30);
+         background: $secondBlueColor;
+         margin-top: toRem(20);
+         color: $mainColor;
+         border: none;
+         width: toRem(140);
+         height: toRem(40);
+         font-size: toRem(16);
+         border-radius: toRem(5);
+         text-transform: uppercase;
+         letter-spacing: 1px;
+         cursor: pointer;
+         transition: all 0.3s;
+
+         &:hover {
+            background: #064cb6;
+            color: $secondOrangeColor;
+         }
+
+
+
+      }
+   }
+}
+
+.info-item {
+}
+.contactus {
+}
+
+.send-btn {
+}
+
+
+
+// Footer =====================================================================
+
+.footer {
+   padding: toRem(15) 0;
+   border-bottom: toRem(1) solid #666666;
+   background: url(/images/bg/bg-step.jpg) no-repeat;
+   background-size: cover;
+   background-position: bottom;
+   font-size: toRem(12);
+   
+   color: rgb(255, 255, 255);
+   letter-spacing: toRem(2);
+   
+
+   // .footer__container
+
+   &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      .footer-contact {
+
+         flex:0 0 40%;
+
+         div {
+            margin-top: toRem(10);
+   
+            &:nth-child(3) {
+               &::before {
+                  content: "";
+                  width: toRem(12);
+                  height: toRem(17);
+                  background-image: url(../images/sprite/sprite.png);
+                  background-position: -220px -145px;
+                  vertical-align: middle;
+                  margin-right: toRem(10);
+               }
+   
+            }
+            &:nth-child(1) {
+               &::before {
+                  content: "";
+                  width: toRem(14);
+                  height: toRem(14);
+                  background-image: url(../images/sprite/sprite.png);
+                  background-position: -102px -212px;
+                  vertical-align: middle;
+                  margin-right: toRem(10);
+               }
+   
+            }
+            &:nth-child(2) {
+               &::before {
+                  content: "";
+                  width: toRem(16);
+                  height: toRem(10);
+                  background-image: url(../images/sprite/sprite.png);
+                  background-position: -152px -185px;
+                  vertical-align: middle;
+                  margin-right: toRem(10);
+               }
+   
+            }
+         }
+
+   }}
+
+   .social-buttons {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+    }
+    
+    .social-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      margin: 0 10px;
+      background-color: #fff;
+      box-shadow: 0px 0px 4px #00000027;
+      transition: 0.3s;
+
+      &:hover {
+         background-color: #f2f2f2;
+         box-shadow: 0px 0px 6px 3px #00000027;
+       }
+
+       svg {
+         transition: 0.3s;
+         height: 20px;
+       }
+    }
+    
+    
+        
+    .facebook {
+      background-color: #3b5998;
+
+      svg {
+         fill: #f2f2f2;
+       }
+
+      &:hover svg {
+         fill: #3b5998;
+       }
+    }
+    
+   
+       
+    .linkedin {
+      background-color: #0077b5;
+
+      svg {
+         fill: #f2f2f2;
+       }
+
+      &:hover svg {
+         fill: #0077b5;
+       }
+    }
+    
+  
+    
+    .instagram {
+      background-color: #c13584;
+
+      svg {
+         fill: #f2f2f2;
+       }
+
+      &:hover svg {
+         fill: #c13584;
+       }
+    }
+    
+       
+}
+
+
 
 
  
