@@ -609,6 +609,109 @@ body {
    }
 }
 
+// Section VidSlider ==========================================================================
+
+.vidslider {
+   height: 100vh;
+   position: relative;
+
+.slider-arrows {
+      left: 50px;
+   }
+
+.vidslider-list {
+   .vidslider-item {
+      position: absolute;
+      inset: 0 0 0 0;
+      overflow: hidden;
+      opacity: 0;
+      transition: .5s;
+
+      video {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+
+      &::after {
+         content: "";
+         width: 100%;
+         height: 100%;
+         position: absolute;
+         left: 0;
+         bottom: 0;
+         background-image: linear-gradient(to top, rgba(0, 0, 0, .8) 20%, transparent);
+
+      }
+
+      .vidslider-item__content {
+         position: absolute;
+         right: 10%;
+         top: 25%;
+         width: 500px;
+         max-width: 80%;
+         z-index: 1;
+         font-family: "Oswald", sans-serif;
+         text-transform: uppercase;
+         color: $mainColor;
+
+         p {
+            &:nth-child(1) {
+               letter-spacing: 10px;
+               font-weight: 600;
+            }
+         }
+
+         h2 {
+            font-size: 100px;
+            font-weight: 700;
+            margin: 0 0 toRem(20) toRem(-5);
+         }
+
+      }
+
+      
+
+      &.active {
+         opacity: 1;
+         z-index: 10;
+
+        
+
+         p:nth-child(1),
+         h2,
+         p:nth-child(3) {
+            transform: translateY(30px);
+            filter: blur(20px);
+            opacity: 0;
+            animation: showContent .5s .7s ease-in-out 1 forwards;
+
+         }
+
+         h2 {
+            animation-delay: 1s;
+         }
+
+         p:nth-child(3) {
+            animation-duration: 1.3s;
+         } 
+         
+         @keyframes showContent {
+            to {
+               transform: translateY(0);
+               filter: blur(0);
+               opacity: 1;
+            }
+         }
+
+      }
+   }
+
+
+}
+
+}
+
 
 
 // Eqipment ====================================================================
@@ -725,108 +828,7 @@ body {
 
 
 
-// Section VidSlider ==========================================================================
 
-.vidslider {
-   height: 100vh;
-   position: relative;
-
-.slider-arrows {
-      left: 50px;
-   }
-
-.vidslider-list {
-   .vidslider-item {
-      position: absolute;
-      inset: 0 0 0 0;
-      overflow: hidden;
-      opacity: 0;
-      transition: .5s;
-
-      video {
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
-      }
-
-      &::after {
-         content: "";
-         width: 100%;
-         height: 100%;
-         position: absolute;
-         left: 0;
-         bottom: 0;
-         background-image: linear-gradient(to top, rgba(0, 0, 0, .8) 20%, transparent);
-
-      }
-
-      .vidslider-item__content {
-         position: absolute;
-         right: 10%;
-         top: 25%;
-         width: 500px;
-         max-width: 80%;
-         z-index: 1;
-         font-family: "Oswald", sans-serif;
-         text-transform: uppercase;
-         color: $mainColor;
-
-         p {
-            &:nth-child(1) {
-               letter-spacing: 10px;
-               font-weight: 600;
-            }
-         }
-
-         h2 {
-            font-size: 100px;
-            font-weight: 700;
-            margin: 0 0 toRem(20) toRem(-5);
-         }
-
-      }
-
-      
-
-      &.active {
-         opacity: 1;
-         z-index: 10;
-
-        
-
-         p:nth-child(1),
-         h2,
-         p:nth-child(3) {
-            transform: translateY(30px);
-            filter: blur(20px);
-            opacity: 0;
-            animation: showContent .5s .7s ease-in-out 1 forwards;
-
-         }
-
-         h2 {
-            animation-delay: 1s;
-         }
-
-         p:nth-child(3) {
-            animation-duration: 1.3s;
-         } 
-         
-         @keyframes showContent {
-            to {
-               transform: translateY(0);
-               filter: blur(0);
-               opacity: 1;
-            }
-         }
-
-      }
-   }
-
-
-}
-
-}
 
 
 // Section Contact ==============================================================================
