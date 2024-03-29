@@ -976,7 +976,7 @@ body {
 
          &:hover {
             background: #064cb6;
-            color: $secondOrangeColor;
+            
          }
 
 
@@ -1000,9 +1000,9 @@ body {
 .footer {
    padding: toRem(15) 0;
    border-bottom: toRem(1) solid #666666;
-   background: url(/images/bg/bg-step.jpg) no-repeat;
+   background: url(/images/bg/bg-step-f.webp) no-repeat;
    background-size: cover;
-   background-position: bottom;
+   
    font-size: toRem(12);
    
    color: rgb(255, 255, 255);
@@ -1107,22 +1107,7 @@ body {
        }
     }
     
-   
-       
-    .linkedin {
-      background-color: #0077b5;
-
-      svg {
-         fill: #f2f2f2;
-       }
-
-      &:hover svg {
-         fill: #0077b5;
-       }
-    }
-    
   
-    
     .instagram {
       background-color: #c13584;
 
