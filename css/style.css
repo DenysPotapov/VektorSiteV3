@@ -669,6 +669,9 @@ body {
   scrollbar-color: #F99002 #f0eaea;
   scroll-behavior: smooth;
 }
+.eqip__field-text p {
+  margin-bottom: 0.625rem;
+}
 .eqip__field-picture {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 40%;

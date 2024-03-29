@@ -76,7 +76,7 @@ vidprev.onclick = function () {
 // auto run slider
 let refreshVidInterval = setInterval(() => {
    vidnext.click();
-}, 5000)
+}, 10000)
 
 
 function showVidSlider() {
@@ -91,7 +91,7 @@ function showVidSlider() {
    clearInterval(refreshVidInterval);
    refreshVidInterval = setInterval(() => {
       vidnext.click();
-   }, 5000)
+   }, 10000)
 
 }
 

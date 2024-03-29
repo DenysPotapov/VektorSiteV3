@@ -741,6 +741,10 @@ body {
       scrollbar-color: $secondOrangeColor #f0eaea;
       scroll-behavior: smooth;
 
+      p {
+         margin-bottom: toRem(10);
+      }
+
       
    }
 
