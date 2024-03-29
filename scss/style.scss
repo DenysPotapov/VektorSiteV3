@@ -921,6 +921,7 @@ body {
    // .contact__form
 
    &__form {
+      position: relative;
       .text-box {
          background: $secondBlackColor;
          color: $mainColor;
@@ -963,7 +964,10 @@ body {
       }
 
       .send-btn {
-         float: right;
+         position: absolute;
+         right: 10px;
+         bottom: -10px;
+         
          margin-bottom: toRem(30);
          background: $secondBlueColor;
          margin-top: toRem(20);

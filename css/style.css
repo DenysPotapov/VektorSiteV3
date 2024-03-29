@@ -805,6 +805,9 @@ body {
   background-position: -152px -185px;
   margin-right: 0.625rem;
 }
+.contact__form {
+  position: relative;
+}
 .contact__form .text-box {
   background: #131313;
   color: #fff;
@@ -845,7 +848,9 @@ body {
   font-family: "Raleway", sans-serif;
 }
 .contact__form .send-btn {
-  float: right;
+  position: absolute;
+  right: 10px;
+  bottom: -10px;
   margin-bottom: 1.875rem;
   background: #045fe7;
   margin-top: 1.25rem;
