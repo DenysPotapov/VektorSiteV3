@@ -855,7 +855,8 @@ body {
       
       background: url(/images/bg/bg-step.jpg) no-repeat;
       background-size: cover;
-      background-position: left;
+      background-position: top;
+      background-attachment: fixed;
       
 
 
@@ -1136,6 +1137,88 @@ body {
 }
 
 
+
+// Section PageService =============================================================================
+
+.service {
+   margin-top: toRem(70);
+   
+
+   // .service__container
+
+   &__container {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      
+   }
+
+   // .service__fields
+
+   &__field {
+      flex: 0 0 60%;
+   }
+
+   // .service__article
+
+   &__article {
+      p {
+         margin-bottom: toRem(10);
+      }
+
+      
+   }
+}
+.services {
+
+   // .services__field-home
+
+   &__field-home {
+     
+   }
+}
+.home-field {
+
+   // .home-field__menu
+
+   &__menu {
+   }
+
+   // .home-field__menu-title
+
+   &__menu-title {
+   }
+
+   // .home-field__menu-menu
+
+   &__menu-menu {
+   }
+
+   // .home-field__list
+
+   &__list {
+   }
+
+   // .home-field__item
+
+   &__item {
+   }
+
+   // .home-field__link
+
+   &__link {
+   }
+}
+.section-title {
+
+   h1 {
+      color: $secondBlackColor;
+      text-transform: uppercase;
+      font-size: toRem(50);
+      line-height: 1.15;
+      font-weight: 600;
+   }
+}
 
 
  

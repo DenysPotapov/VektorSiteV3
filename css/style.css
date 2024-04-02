@@ -752,7 +752,8 @@ body {
 .contact__fields {
   background: url(/images/bg/bg-step.jpg) no-repeat;
   background-size: cover;
-  background-position: left;
+  background-position: top;
+  background-attachment: fixed;
 }
 .contact__fields .fields__container {
   display: -webkit-box;
@@ -986,4 +987,35 @@ body {
 }
 .footer .instagram:hover svg {
   fill: #c13584;
+}
+
+.service {
+  margin-top: 4.375rem;
+}
+.service__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.service__field {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 60%;
+          flex: 0 0 60%;
+}
+.service__article p {
+  margin-bottom: 0.625rem;
+}
+
+.section-title h1 {
+  color: #131313;
+  text-transform: uppercase;
+  font-size: 3.125rem;
+  line-height: 1.15;
+  font-weight: 600;
 }
