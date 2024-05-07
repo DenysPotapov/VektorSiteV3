@@ -1452,17 +1452,67 @@ body {
 
    
 }
+
+
+
+
+//  Price Section ======================================================================
+
+.price {
+
+   // .price__container
+
+   &__container {
+   }
+
+   // .price__table
+
+   &__table {
+      background: $mainColor;
+      border-collapse: collapse;
+      text-align: center;
+      width: 100%;
+
+      th {
+         margin-bottom: toRem(30);
+         background: $secondBlueColor;
+         margin-top: toRem(20);
+         color: $mainColor;
+         border: none;
+         width: toRem(140);
+         height: toRem(40);
+         font-size: toRem(16);
+         
+         text-transform: uppercase;
+         letter-spacing: 1px;
+  
+       }
+
+       tr {
+         &:nth-child(odd) {
+            background: #ebf3f9;
+            // color: $mainColor;
+         }
+       }
+
+       td {
+
+         &:nth-child(odd) {
+            width: 75%;
+            text-align: left;
+         }
+
+         border: 1px solid #e3eef7;
+         padding: 10px 15px;
+        
+       }
+
+
+      
+   }
+}
 .section-title {
 }
-
-
-
- 
- 
-
-
-
-
 
 
 

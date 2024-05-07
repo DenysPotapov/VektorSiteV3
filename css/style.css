@@ -1244,3 +1244,32 @@ body {
 .gallery__items .gallery__item:nth-child(13) {
   background-image: url(/images/gallery/svn/camphoto-13.webp);
 }
+.price__table {
+  background: #fff;
+  border-collapse: collapse;
+  text-align: center;
+  width: 100%;
+}
+.price__table th {
+  margin-bottom: 1.875rem;
+  background: #045fe7;
+  margin-top: 1.25rem;
+  color: #fff;
+  border: none;
+  width: 8.75rem;
+  height: 2.5rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.price__table tr:nth-child(odd) {
+  background: #ebf3f9;
+}
+.price__table td {
+  border: 1px solid #e3eef7;
+  padding: 10px 15px;
+}
+.price__table td:nth-child(odd) {
+  width: 75%;
+  text-align: left;
+}
