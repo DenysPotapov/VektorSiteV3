@@ -1295,163 +1295,132 @@ body {
 
 
 .gallery {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   width: 100%;
+   
+   img {
+      width: 100%;
+      display: block;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      transition: transform 1000ms;
+
+   }
+
+   ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: grid;
+      gap: 0.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+      max-width: 100%;
+      // width: 100%;
+   }
+
+   figure {
+      margin: 0;
+      position: relative;
+      overflow: hidden;
+
+      &::after {
+         content: '';
+         position: absolute;
+         top: 50%;
+         left: 50%;
+         width: 200%;
+         height: 200%;
+         background: rgba(0, 0, 0, 0.5);
+         transform-origin: center;
+         opacity: 0;
+         transform: scale(2);
+         transition: opacity 300ms;
+      }
+
+
+   }
+
+   figcaption {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      justify-content: center;
+      place-items: center;
+      text-align: center;
+      padding: 1rem;
+      color: white;
+      font-size: 1.2rem;
+      z-index: 1;
+      opacity: 0;
+      transition: opacity 600ms, transform 600ms;
+   }
+
+   li {
+      &:is(:hover, :focus) {
+         
+         figure {
+            &::after {
+               opacity: 1;
+            }
+         }
+         figcaption {
+            opacity: 1;
+            transition: opacity 600ms;
+         }
+      }
+   }
+
+   @media (prefers-reduced-motion: no-preference) {
+      figcaption {
+         transform: translate3d(0, 2rem, 0);
+      }
+      
+      figure {
+         
+         &::after {
+         border-radius: 50%;
+         opacity: 1;
+         transform: scale(0);
+         transition: transform 900ms;
+         }
+      }
+
+      li {
+         
+         &:is(:hover, :focus) {
+            
+            figure {
+               &::after {
+                  transform: scale(2.5);
+               }
+            }
+            
+            figcaption {
+               opacity: 1;
+               transform: translate3d(0, 0, 0);
+               transition: opacity 600ms 400ms, transform 600ms 400ms;
+            }
+            
+            img {
+               transform: scale(1.2);
+            }
+         }
+      }
+   }
+   
 
    // .gallery__container
 
    &__container {
    }
-
-   // .gallery__items
-
-   &__items {
-
-      display: flex;
-      gap: 5px;
-      align-items: center;
-      justify-content: center;
-      height: 35vh;
-      perspective: 500px;
-      
-      .gallery__item {
-
-         width: 100px;
-         height: 200px;
-         background-color: #131313;
-         background-size: cover;
-         background-position: center;
-         cursor: pointer;
-         filter: grayscale(1) brightness(.5);
-         
-         transition: transform 1.25s cubic-bezier(.1, .7, 0, 1), filter 3s cubic-bezier(.1, .7, 0, 1), width 1.25s cubic-bezier(.1, .7, 0, 1);
-         will-change: transform, filter;
-
-         &::before,
-         &::after {
-            position: absolute;
-            content: "";
-            height: 100%;
-            width: 30px;
-            right: -15px;
-
-         }
-
-         &::after {
-            left: -15px;
-         }
-
-         &:hover {
-            filter: inherit;
-            transform: translateZ(100px);
-
-            + * {
-               filter: inherit;
-               transform: translateZ(85px) rotateY(20deg);
-               z-index: -1;
-
-               + * {
-                  filter: inherit;
-                  transform: translateZ(50px) rotateY(15deg);
-                  z-index: -2;
-
-                  + * {
-                     filter: inherit;
-                     transform: translateZ(25px) rotateY(10deg);
-                     z-index: -3;
-
-                     + * {
-                        filter: inherit;
-                        transform: translateZ(6px) rotateY(5deg);
-                        z-index: -4;
-                     }
-                  }
-               }
-            }
-         }
-
-         &:has( + :hover) {
-            filter: inherit;
-            transform: translateZ(85px) rotateY(-20deg);
-         }
-
-         &:has( + * + :hover) {
-            filter: inherit;
-            transform: translateZ(50px) rotateY(-15deg);
-         }
-         
-         &:has( + * + * + :hover) {
-            filter: inherit;
-            transform: translateZ(25px) rotateY(-10deg);
-         }
-         
-         &:has( + * + * + * + :hover) {
-            filter: inherit;
-            transform: translateZ(6px) rotateY(-5deg);
-         }
-
-         &:active,
-         &:focus {
-            width: 25vw;
-            height: 100%;
-            filter: inherit;
-            z-index: 10;
-            transform: translateZ(150px);
-            margin: 0 .45vw;
-         }
-         
-         &:nth-child(1) {
-            background-image: url(/images/gallery/svn/camphoto-1.webp);
-         }
-         &:nth-child(2) {
-            background-image: url(/images/gallery/svn/camphoto-2.webp);
-         }
-         &:nth-child(3) {
-            background-image: url(/images/gallery/svn/camphoto-3.webp);
-         }
-         &:nth-child(4) {
-            background-image: url(/images/gallery/svn/camphoto-4.webp);
-         }
-         &:nth-child(5) {
-            background-image: url(/images/gallery/svn/camphoto-5.webp);
-         }
-         &:nth-child(6) {
-            background-image: url(/images/gallery/svn/camphoto-6.webp);
-         }
-         &:nth-child(7) {
-            background-image: url(/images/gallery/svn/camphoto-7.webp);
-         }
-         &:nth-child(8) {
-            background-image: url(/images/gallery/svn/camphoto-8.webp);
-         }
-         &:nth-child(9) {
-            background-image: url(/images/gallery/svn/camphoto-9.webp);
-         }
-         &:nth-child(10) {
-            background-image: url(/images/gallery/svn/camphoto-10.webp);
-         }
-         &:nth-child(11) {
-            background-image: url(/images/gallery/svn/camphoto-11.webp);
-         }
-         &:nth-child(12) {
-            background-image: url(/images/gallery/svn/camphoto-12.webp);
-         }
-         &:nth-child(13) {
-            background-image: url(/images/gallery/svn/camphoto-13.webp);
-         }
-         
-         
-
-         div {
-   
-            
-         }
-      }
-
-   }
-
-   // .gallery__item
-
-   
 }
+
+
 
 
 
