@@ -103,3 +103,47 @@ let copy = document.querySelector(".eqip__logos-slide").cloneNode(true);
 document.querySelector(".eqip__logos").appendChild(copy);
 
 
+
+// Menu-burger
+
+let menu = document.querySelector(".menu");
+let menuBtn = document.querySelector(".header-menu__icon");
+
+let body = document.body;
+
+if (menu && menuBtn) {
+   menuBtn.addEventListener("click", () => {
+      menu.classList.toggle("active")
+      menuBtn.classList.toggle("active")
+      body.classList.toggle("lock")
+   })
+
+   menu.querySelectorAll(".header-menu__link").forEach(link => {
+      link.addEventListener("click", () => {
+         menu.classList.remove("active")
+         menuBtn.classList.remove("active")
+         body.classList.remove("lock")
+      })
+   })
+}
+
+// Smooth schroll
+
+let anchors = document.querySelectorAll('a[href*="#"]');
+
+anchors.forEach(anchors => {
+   anchors.addEventListener("click", event => {
+      event.preventDefault();
+
+      let blockID = anchors.getAttribute("href").substring(1);
+
+      document.getElementById(blockID).scrollIntoView({
+         behavior: "smooth",
+         block: "start"
+      })
+   })
+})
+
+
+
+
